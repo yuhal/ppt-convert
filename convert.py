@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # !python3
 '''
 该py脚本可以将ppt/pptx文件进行自动转换。
@@ -6,18 +7,31 @@
 '''
 
 import os
+
 import time
+
 import math
+
 import codecs
-import win32com
+
 import shutil
+
+import win32com
+
 from win32com.client import Dispatch, constants
+
 from PIL import Image, ImageDraw, ImageFont
-from reportlab.lib.pagesizes import letter, A4, landscape  
+
+from reportlab.lib.pagesizes import letter, A4, landscape
+
 from reportlab.platypus import SimpleDocTemplate
-from reportlab.lib.units import inch  
+
+from reportlab.lib.units import inch
+
 from reportlab.pdfgen import canvas
+
 from reportlab import rl_settings
+
 
 # ppt转成png文件
 def ppt2png(filename,dst_filename):
