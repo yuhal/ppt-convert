@@ -6,27 +6,11 @@ PPT convert PNG
 
 import os
 
-import time
-
-import math
-
-import codecs
-
-import shutil
-
 import filetype
 
 import win32com
 
-from win32com.client import Dispatch, constants
-
-from PIL import Image, ImageDraw, ImageFont
-
-from reportlab import rl_settings
-from reportlab.lib.units import inch
-from reportlab.lib.pagesizes import letter, A4, landscape
-from reportlab.pdfgen import canvas
-from reportlab.platypus import SimpleDocTemplate
+from win32com.client import Dispatch
 
 def ppt2png(filename,dst_filename):
     """A folder with the same name as the PPT file will be created in the 
@@ -37,7 +21,7 @@ def ppt2png(filename,dst_filename):
     ppt = win32com.client.Dispatch('PowerPoint.Application')
     # ppt.DisplayAlerts = False
     pptSel = ppt.Presentations.Open(filename, WithWindow = False)
-    pptSel.SaveAs(dst_filename,18); # with 17, jpeg
+    pptSel.SaveAs(dst_filename,18); # 18 for ppt to png
     ppt.Quit()
 
 ppt_dir = os.getcwd() # Get the current working directory
@@ -52,7 +36,7 @@ for fn in (fns for fns in os.listdir(ppt_dir)
             file_name = os.path.splitext(fn)[0]
             print('Converting ' + fn)
             ppt_file = os.path.join(ppt_dir, fn)
-            img_file = os.path.join(ppt_dir, file_name+'.png')
+            img_file = os.path.join(ppt_dir, file_name + '-png' + '.png')
             ppt2png(ppt_file,img_file)
     except:
         print('Getting file type error ' + fn)
