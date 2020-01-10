@@ -23,9 +23,9 @@
 # 目录结构
 ```
 脚本部署目录
-├─convert_png.py                pptx转换png
-├─convert_pdf.py                pptx转换pdf
-├─convert_split_pdf.py        pptx转换并拆分pdf
+├─convert_png.py                ppt转换png
+├─convert_pdf.py                ppt转换pdf
+├─convert_split_pdf.py        ppt转换并拆分pdf
 ```
 🐶持续更新 ing，欢迎 star / fork
 - 我的邮箱：15736736889@163.com
