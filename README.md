@@ -1,4 +1,7 @@
-** 🐰持续更新ing~欢迎star/fork**
+# Git地址
+[https://github.com/yuhal/ppt-convert](https://github.com/yuhal/ppt-convert)
+🐰持续更新ing~欢迎star/fork
+
 # 简介
 使用python将ppt文件批量转换为指定类型的文件，例如png、pdf。
 
@@ -36,5 +39,8 @@
 - 邮箱：15736736889@163.com
 - 博客：https://yuhal.com
 - 相册：https://image.yuhal.com
-- 微信订阅号：![微信订阅号](https://www.showdoc.cc/server/api/common/visitfile/sign/57290998046da8ab87b33c63388e873f?showdoc=.jpg "微信订阅号")
-- 微信小程序：![微信小程序](https://www.showdoc.cc/server/api/common/visitfile/sign/175771e4718e71f9a4f2dd37d2d5748c?showdoc=.jpg "微信小程序")
+- 微信订阅号：![qrcode_for_gh_a44b146e9aa5_258 (1).jpg](https://upload-images.jianshu.io/upload_images/15325592-a386599c3e3fe4b8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 微信小程序：![gh_e61305e4b70b_258.jpg](https://upload-images.jianshu.io/upload_images/15325592-e3f8e867c427ac54.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
