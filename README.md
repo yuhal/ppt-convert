@@ -1,3 +1,7 @@
+** 🐰持续更新ing~欢迎star/fork**
+# 简介
+使用python将ppt文件批量转换为指定类型的文件，例如png、pdf。
+
 # 环境
 - Windows Server  2016 数据中心版 64位中文版
 - Python 3.8.1
@@ -27,6 +31,10 @@
 ├─convert_pdf.py                ppt转换pdf
 ├─convert_split_pdf.py        ppt转换并拆分pdf
 ```
-🐶持续更新 ing，欢迎 star / fork
-- 我的邮箱：15736736889@163.com
-- 我的博客：https://yuhal.coding.me
+
+# 关于我
+- 邮箱：15736736889@163.com
+- 博客：https://yuhal.com
+- 相册：https://image.yuhal.com
+- 微信订阅号：![微信订阅号](https://www.showdoc.cc/server/api/common/visitfile/sign/57290998046da8ab87b33c63388e873f?showdoc=.jpg "微信订阅号")
+- 微信小程序：![微信小程序](https://www.showdoc.cc/server/api/common/visitfile/sign/175771e4718e71f9a4f2dd37d2d5748c?showdoc=.jpg "微信小程序")
