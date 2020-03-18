@@ -7,6 +7,11 @@ PPT catch TEXT
 from pptx import Presentation
 
 def ppt_catch_format_text(filename):
+    """
+    Text stores strings in dictionary format,
+    And according to the paragraph format of the text,
+    For every text run in the demo,
+    """
     prs = Presentation(filename)
     txt_oa = {}
     for x in range(len(prs.slides)):
