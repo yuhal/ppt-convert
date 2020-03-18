@@ -26,6 +26,7 @@
 |reportlab  |3.5.32
 |setuptools |41.2.0
 |urllib3    |1.25.7
+|changeOffice|0.53|
 
 # 目录结构
 ```
