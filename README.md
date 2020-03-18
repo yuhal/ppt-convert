@@ -30,9 +30,10 @@
 # 目录结构
 ```
 脚本部署目录
+├─catch_text.py                 ppt抓取text
 ├─convert_png.py                ppt转换png
 ├─convert_pdf.py                ppt转换pdf
-├─convert_split_pdf.py        ppt转换并拆分pdf
+├─convert_split_pdf.py          ppt转换并拆分pdf
 ```
 
 # 关于我
