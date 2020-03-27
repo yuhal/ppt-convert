@@ -6,27 +6,8 @@
 使用python将ppt文件批量转换为指定类型的文件，例如png、pdf。
 
 # 环境
-- Windows Server  2016 数据中心版 64位中文版
+- Windows Server  2016 数据中心版 64位中文版(需安装office)
 - Python 3.8.1
-- WPS 2019
-
-# 标准库
-|Package   |Version   |
-| ------------ | ------------ |
-|certifi    |2019.11.28
-|chardet    |3.0.4
-|comtypes   |1.1.7
-|filetype   |1.0.5
-|idna       |2.8
-|Pillow     |7.0.0
-|pip        |19.3.1
-|PyMySQL    |0.9.3
-|PyPDF2     |1.26.0
-|pywin32    |227
-|reportlab  |3.5.32
-|setuptools |41.2.0
-|urllib3    |1.25.7
-|changeOffice|0.53|
 
 # 目录结构
 ```
