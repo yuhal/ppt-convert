@@ -1,15 +1,14 @@
 # -*- coding: utf-8 -*-
 # !python3
 """
-PPT catch TEXT
+PPT catch text
 """
 
 from pptx import Presentation
 
 def ppt_catch_text(filename):
     """
-    Text stores strings in dictionary format,
-    one for each text run in presentation
+    Extract all text from slides in presentation
     """
     prs = Presentation(filename)
     text = {}
@@ -25,4 +24,4 @@ def ppt_catch_text(filename):
 
     return text
 
-ppt_catch_text('xxx.pptx')
+print(ppt_catch_text('./sample.pptx'))

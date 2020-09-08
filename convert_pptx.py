@@ -6,8 +6,8 @@ PPT convert PPTX
 
 from changeOffice import Change
 
-c = Change("./ppt")
+change = Change("./")
 
-c.ppt2pptx()
+change.ppt2pptx()
 
-print(c.get_allPath())
+print(change.get_allPath())

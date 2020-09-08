@@ -1,45 +1,48 @@
 # -*- coding: utf-8 -*-
 # !python3
 """
-PPT catch TEXT
+PPT catch format text
 """
 
 from pptx import Presentation
 
+from pptx.enum.shapes import MSO_SHAPE_TYPE
+
 def ppt_catch_format_text(filename):
     """
-    Text stores strings in dictionary format,
-    And according to the paragraph format of the text,
-    For every text run in the demo,
+    Extract all text from the slides in the presentation 
+    and return it in the format.
     """
     prs = Presentation(filename)
     txt_oa = {}
     for x in range(len(prs.slides)):
         txt_oa[x] = []
+
+        # Only on table elements
         for shape in prs.slides[x].shapes:
+            if hasattr(shape, "table"):
+                for row in shape.table.rows:
+                    row_str = ""
+                    for cell in row.cells:
+                        row_str += cell.text_frame.text + " | "
+                    row_text = row_str.encode('utf-8').strip().decode()
+                    txt_oa[x].append(row_text)
 
-            if shape.shape_type._member_name == 'TEXT_BOX' \
-            or shape.shape_type._member_name == 'AUTO_SHAPE' \
-            or shape.shape_type._member_name == 'PLACEHOLDER':
-                shape_txt = shape.text.encode('utf-8').strip().decode()
+        # Only on text-boxes outside group elements
+        for shape in prs.slides[x].shapes:
+            if hasattr(shape, "text"):
+                row_text_arr = shape.text.encode('utf-8').strip().decode().split("\n")
+                for row_text in row_text_arr:
+                    txt_oa[x].append(row_text)
 
-                if len(shape_txt) > 0 :
-                    txt_oa[x].extend( shape_txt.split('\n') )
-
-            if shape.shape_type._member_name == 'TABLE':
-                tb = shape.table
-                tb_row_size = len(shape.table.rows)
-                tb_col_size = len(shape.table.columns)
-
-                for ri in range(0,tb_row_size):
-                    row_text_da = []
-
-                    for ci in range(0,tb_col_size):
-                        row_text_da.append(tb.cell(ri,ci).text_frame.text)
-
-                    row_text = ' '.join(row_text_da).encode('utf-8').strip().decode()
-                    if len(row_text) > 0 :
-                        txt_oa[x].append( row_text )
+        # Only on group shapes elements
+        group_shapes = [shp for shp in prs.slides[x].shapes 
+                        if shp.shape_type ==MSO_SHAPE_TYPE.GROUP]
+        for group_shape in group_shapes:
+            for shape in group_shape.shapes:
+                if shape.has_text_frame:
+                    row_text = shape.text.encode('utf-8').strip().decode()
+                    txt_oa[x].append(row_text)
     return txt_oa
 
-print(ppt_catch_format_text('xxx.pptx'))
+print(ppt_catch_format_text('./sample.pptx'))
